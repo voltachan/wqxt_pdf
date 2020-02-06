@@ -9,7 +9,6 @@ import sqlite3
 import logging
 import collections
 import jwt
-import img2pdf
 import requests
 from urllib import parse
 
@@ -204,7 +203,7 @@ alldone=False
 if __name__ == '__main__':
     # usage: python3 crawl_wqxt.py <book_id>
     dl = WQXTDownloader()
-    a=int(sys.argv[1])
+    a=sys.argv[1]
     gettoken()
     while alldone==False:
       alldone=True
